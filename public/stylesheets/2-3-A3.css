@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.listType {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end !important;
+  padding: 5px 20px;
+  font-size: 20px;
+}
+
+.listType a {
+  margin-left: 10px;
+}
