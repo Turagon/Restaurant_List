@@ -15,18 +15,19 @@ app.get('/home', (req, res) => {
 })
 
 app.get('/search', (req, res) => {
-  res.render('cards', { restaurant: restaurantList })
+  let keyword = req.query.keyword.toLowerCase()
+  restaurantSearch = restaurantList.filter(item => {
+    return item.name_en.toLowerCase().includes(keyword)
+  })
+    res.render('cards', { restaurant: restaurantSearch })
 })
 
-app.get('/:restaurant_id', (req, res) => {
+app.get('/home/:restaurant_id', (req, res) => {
   let restaurant = restaurantList.filter(item => {
     return item.id.toString() === req.params.restaurant_id
   })
   res.render('detail', { restaurant: restaurant })
 })
-
-
-
 
 app.listen(port, () => {
   console.log('server online now')
