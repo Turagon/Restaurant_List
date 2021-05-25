@@ -6,6 +6,8 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 .container {
@@ -30,4 +32,83 @@ header {
 
 .listType a {
   margin-left: 10px;
+  width: auto;
+}
+
+/*卡片的顯示方式 */
+.main-cards {
+  width: 100%;
+  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  height: 45vh;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid lightblue;
+}
+
+.photo {
+  width: 100%;
+  height: 30vh;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.general-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vh;
+  padding: 2px 3px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.general-info button {
+  border: none;
+  border-radius: 3px;
+  background-color: midnightblue;
+}
+
+.general-info button a {
+  color: aliceblue;
+  font-weight: bolder;
+}
+
+/* 單獨顯示方式 */
+.main-detail {
+  width: 95%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-info button {
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.title-info {
+  display: flex;
+  justify-content: space-between;
 }

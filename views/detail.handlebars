@@ -1,0 +1,24 @@
+<div class="main-detail">
+  {{#each restaurant}}
+  <div class="image">
+    <img src="{{this.image}}" alt="">
+  </div>
+  <div class="detail-info">
+    <div class="title-info">
+      <div class="name">
+        <h3 class="title">{{this.name}}</h3>
+        <h4 class="en-title">{{this.name_en}}</h4>
+      </div>
+      <h4 class="rating">評分 : {{this.rating}}</h4>
+    </div>
+    <span class="category">分類 : {{this.category}}</span>
+    <span class="location">地址 : {{this.location}}</span>
+    <span class="phone">電話 : {{this.phone}}</span>
+    <p class="description">介紹 : {{this.description}}</p>
+    <div class="map">
+      <iframe src="{{this.google_map}}" frameborder="0"></iframe>
+    </div>
+    <button class="details"><a href="/home" class="title">回首頁</a></button>
+  </div>
+  {{/each}}
+</div>
